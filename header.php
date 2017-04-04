@@ -25,6 +25,11 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
+		
+			<?php if ( get_theme_mod('bazz_options_logo') ) : ?>
+				<div class="logo" style="width:100px;height:100px"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img style="width:100%;height:auto;" src="<?php echo get_theme_mod('bazz_options_logo'); ?>" alt="Logo"></a></div>
+			<?php endif; ?>
+			
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
